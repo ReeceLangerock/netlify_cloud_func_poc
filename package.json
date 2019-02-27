@@ -12,7 +12,9 @@
   "license": "ISC",
   "dependencies": {
     "apollo-server-lambda": "^2.4.6",
+    "dotenv": "^6.2.0",
     "graphql": "^14.1.1",
+    "mongoose": "^5.4.15",
     "netlify-lambda": "^1.4.2"
   }
 }
