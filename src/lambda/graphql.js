@@ -4,7 +4,6 @@ const dotenv = require('dotenv');
 dotenv.config();
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
-const cors = require('cors')
 
 const MONGO_URI = process.env.MONGO_URI;
 console.log(process.env.MONGO_URI);
