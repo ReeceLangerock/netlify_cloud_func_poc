@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
+const cors = require('cors')
 
 const MONGO_URI = process.env.MONGO_URI;
 console.log(process.env.MONGO_URI);
@@ -27,6 +28,7 @@ const postSchema = new Schema(
 		timestamps: true
 	}
 );
+
 
 const Post = mongoose.model('post', postSchema);
 
@@ -72,7 +74,8 @@ const resolvers = {
 const server = new ApolloServer({
 	introspection: true,
 	playground: true,
-	typeDefs,
+    typeDefs,
+    cors: false,
 	resolvers,
 	context: ({ req }) => ({
 		Post
